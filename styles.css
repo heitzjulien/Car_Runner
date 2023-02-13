@@ -1,3 +1,75 @@
 * {
+    padding: 0;
+    margin: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+/* #container {
+    height: 500px;
+    width: 2000px;
+    position: relative;
+    overflow: hidden;
+} */
+#container #car_player {
+    height: 100px;
+    width: 70px;
+    position: absolute;
+    bottom: 58px;
+    left: 70px;
+    right: -65px;
+    margin: auto;
+    display: flex;
+}
+#container #car_player img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+.car_playerAnimate{
+    animation: animatecar_player 0.5s linear infinite;
+}
+@keyframes animatecar_player {
+    0%,100%
+    {
+        left: 50px;
+    }
+    45%,55%
+    {
+        left: 160px;
+    }
+}
+#container #road {
+    height: 100%;
+    width: 100%;
+    bottom: 0;  
+}
+#container #road img {
+    height: 300%;
+    width: 100%;
+    object-fit: contain;
+}
+.roadAnimate {
+    animation: 3s linear 1s infinite;
+}
+@keyframes roadAnimate {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 2000px;
+    }
+}
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 300px;
+    color: black;
+    font-weight: bold;
 }

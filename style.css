@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+/* html { overflow-y: hidden; }  */
+body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+#car img{
+    height: 10%;
+    width:10%;
+    z-index: 1;
+    object-fit: contain;
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}
+.carActivate {
+    animation: animateCar 0.5s linear infinite;
+}
+@keyframes animateCar {
+    0%,100%
+    {
+        top: 900px;
+        left: 490px;
+    }
+    45%,55%
+    {
+        top: 900px;
+        left: 440px;
+    }
+}
+/* #road {
+    background: 0 / contain repeat-y url("/assets/road7.svg");
+    height: 300vh;
+    width: 200vw;
+    object-fit: contain;
+    animation: animateRoad 5s linear infinite both;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+} */
+#road img {
+    height: 100%;
+    width:80%;
+    position: relative;
+    margin-top: -4px;
+    animation: animateRoad 5s linear infinite both;
+}
+@keyframes animateRoad {
+    0% {
+        transform: translateY(-140vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
